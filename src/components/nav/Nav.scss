@@ -1,0 +1,34 @@
+.nav-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #2b2d42;
+	color: #bcbedc;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	padding-bottom: 8rem;
+}
+
+.seasons-container {
+	display: flex;
+	text-align: center;
+
+	a {
+		padding: 1rem;
+		font-size: 1rem;
+		font-weight: bold;
+		div {
+			font-size: 0.8rem;
+			font-weight: lighter;
+		}
+	}
+}
+
+.logo-container {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.login {
+	font-weight: 700;
+}

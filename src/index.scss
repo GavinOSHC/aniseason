@@ -1,0 +1,23 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "roboto";
+	background-color: rgb(237, 241, 245);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		color: white;
+	}
+}
+
+.white {
+	color: white;
+}
