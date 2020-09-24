@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Nav from "../../components/nav/Nav";
 import { connect } from "react-redux";
 import { fetchAnime } from "../../actions";
+import AnimeCard from "../../components/card/Card";
+import Grid from "@material-ui/core/Grid";
 
 import "./Home.scss";
 
@@ -31,7 +33,15 @@ const Home = ({ anime, loading, error, dispatch }) => {
         <div className="anime-container">
           <div className="TV">
             <h3 className="white">TV</h3>
-            {renderTVanime()}
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              spacing={2}
+            >
+              {renderTVanime()}
+            </Grid>
           </div>
           <div className="Movies">
             <h3 className="white">TV</h3>
@@ -51,7 +61,9 @@ const Home = ({ anime, loading, error, dispatch }) => {
 
     console.log(tv);
     return tv.map(({ id, attributes }) => (
-      <p key={id}>{attributes.titles.en_jp}</p>
+      <Grid item xs={12} sm={6} md={3}>
+        <AnimeCard name={attributes.titles.en_jp} />
+      </Grid>
     ));
   };
 

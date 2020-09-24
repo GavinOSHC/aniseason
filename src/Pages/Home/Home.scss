@@ -1,16 +1,17 @@
 .anime-chart {
-	position: relative;
-	margin-top: -110px;
-	margin-left: 1vw;
-	margin-right: 1vw;
+  position: relative;
+  margin-top: -110px;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .anime-container {
-	padding-top: 1rem;
+  padding-top: 1rem;
+  width: 100%;
 }
 
 .TV {
-	height: 500px;
-	width: 100%;
-	border: 1px solid red;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
