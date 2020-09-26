@@ -1,4 +1,4 @@
-import { FETCH_ANIME, FETCH_ANIME_ERROR } from "../actions";
+import { FETCH_ANIME, FETCH_ANIME_ERROR, REQUEST_ANIME } from "../actions";
 
 export default (state = { anime: [], loading: true, error: false }, action) => {
 	switch (action.type) {
@@ -16,6 +16,11 @@ export default (state = { anime: [], loading: true, error: false }, action) => {
 				anime: [],
 				loading: false,
 				error: true,
+			};
+		case REQUEST_ANIME:
+			return {
+				...state,
+				loading: true,
 			};
 
 		default:

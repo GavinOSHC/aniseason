@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Nav from "../../components/nav/Nav";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchAnime } from "../../actions";
 import AnimeCard from "../../components/card/Card";
@@ -7,20 +6,10 @@ import Grid from "@material-ui/core/Grid";
 
 import "./Home.scss";
 
-const Home = ({ anime, loading, error, dispatch }) => {
-	const [year, setYear] = useState(2020);
-	const [season, setSeason] = useState("winter");
-
-	const handleYear = (year) => setYear(year);
-	const handleSeason = (season) => setSeason(season);
-
-	const onLoad = () => {
-		dispatch(fetchAnime(season, year));
-	};
-
+const Home = ({ anime, loading, error, dispatch, year, season }) => {
 	useEffect(() => {
-		onLoad();
-	});
+		dispatch(fetchAnime(season, year));
+	}, [dispatch, year, season]);
 
 	const renderLoading = () => {
 		if (error) {
@@ -65,8 +54,6 @@ const Home = ({ anime, loading, error, dispatch }) => {
 		const tv = anime.anime.filter(
 			(anime) => anime.attributes.showType === "TV"
 		);
-
-		console.log(tv);
 		return tv.map(({ id, attributes }) => (
 			<Grid item xs={12} sm={6} md={3} key={id}>
 				<AnimeCard
@@ -80,10 +67,7 @@ const Home = ({ anime, loading, error, dispatch }) => {
 	};
 
 	return (
-		<div className="home-page">
-			<Nav year={year} />
-			{loading ? renderLoading() : renderGrid()}
-		</div>
+		<div className="home-page">{loading ? renderLoading() : renderGrid()}</div>
 	);
 };
 
