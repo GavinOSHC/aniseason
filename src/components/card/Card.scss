@@ -2,83 +2,83 @@ $image-width: 185px;
 $image-width-mobile: 165px;
 
 .MuiGrid-item {
-	padding: 0 !important;
-	margin: 10px !important;
-	max-width: 100% !important;
-	@media screen and (max-width: 700px) {
-		margin: 1rem;
-	}
+  padding: 0 !important;
+  margin: 10px !important;
+  max-width: 100% !important;
+  @media screen and (max-width: 700px) {
+    margin: 1rem;
+  }
 }
 
 .media-card {
-	max-width: 460px;
-	height: 256px;
-	position: relative;
+  max-width: 460px;
+  height: 256px;
+  position: relative;
 }
 
 .card-image {
-	height: 256px;
-	max-width: 185px;
-	width: $image-width;
-	position: absolute;
+  height: 256px;
+  max-width: 185px;
+  width: $image-width;
+  position: absolute;
 
-	@media screen and (max-width: 700px) {
-		max-width: $image-width-mobile;
-	}
+  @media screen and (max-width: 700px) {
+    max-width: $image-width-mobile;
+  }
 }
 
 .card-image-label {
-	position: absolute;
-	bottom: 0;
-	padding: 1rem !important;
-	background-color: rgba(41, 41, 41, $alpha: 0.8);
-	width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem !important;
+  background-color: rgba(41, 41, 41, $alpha: 0.8);
+  width: 100%;
 
-	p {
-		color: white;
-	}
+  p {
+    color: white;
+  }
 }
 
 .card-right-side {
-	margin-left: $image-width;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: 1rem;
-	@media screen and (max-width: 700px) {
-		margin-left: $image-width-mobile;
-	}
+  margin-left: $image-width;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  @media screen and (max-width: 700px) {
+    margin-left: $image-width-mobile;
+  }
 }
 
 .des {
-	padding-top: 0.5rem;
-	height: 150px;
-	overflow-y: hidden;
-	font-size: 0.8rem !important;
+  padding-top: 0.5rem;
+  height: 150px;
+  overflow-y: hidden;
+  font-size: 0.8rem !important;
 
-	&:hover {
-		overflow-y: auto;
-	}
+  &:hover {
+    overflow-y: auto;
+  }
 }
 .watch-trailer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-left: $image-width;
-	height: 3.7rem;
-	cursor: pointer;
-	@media screen and (max-width: 700px) {
-		margin-left: $image-width-mobile;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: $image-width;
+  height: 3.7rem;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    margin-left: $image-width-mobile;
+  }
 
-	p {
-		margin-right: 1rem;
-		margin-left: auto;
-		@media screen and (max-width: 700px) {
-			margin-right: 5px;
-		}
-	}
+  p {
+    margin-right: 5px;
+    margin-left: auto;
+    @media screen and (max-width: 700px) {
+      margin-right: 5px;
+    }
+  }
 
-	svg {
-		margin-right: auto;
-	}
+  svg {
+    margin-right: auto;
+  }
 }
