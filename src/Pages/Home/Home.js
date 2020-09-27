@@ -13,9 +13,9 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
     }, [dispatch, year, season]);
 
     const renderSkeleton = () => {
-        return Array.from(new Array(15)).map((item) => {
+        return Array.from(new Array(15)).map((item, index) => {
             return (
-                <Skeleton className="skeleton" variant="rect">
+                <Skeleton className="skeleton" variant="rect" key={index}>
                     <AnimeCard />
                 </Skeleton>
             );

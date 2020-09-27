@@ -1,44 +1,44 @@
 .ReactModal__Body--open,
 .ReactModal__Html--open {
-	overflow: hidden;
 }
 
 .ReactModal__Overlay {
-	background-color: rgba($color: #000000, $alpha: 0.7) !important;
+    background-color: rgba($color: #000000, $alpha: 0.7) !important;
+    z-index: 1000;
 }
 
 .main-modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	right: auto;
-	bottom: auto;
-	overflow: auto;
-	outline: none;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    overflow: auto;
+    outline: none;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-inner {
-	padding: 30px;
-	border-radius: 4px;
-	border: 1px solid rgb(204, 204, 204);
-	background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
 }
 
 iframe {
-	border-width: 0px !important;
-	// min-height: 60vh;
-	// min-width: 70vw;
-	width: 80vw;
-	height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
-	max-height: 80vh;
-	max-width: 177.78vh; /* 16/9 = 1.778 */
+    border-width: 0px !important;
+    // min-height: 60vh;
+    // min-width: 70vw;
+    width: 80vw;
+    height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+    max-height: 80vh;
+    max-width: 177.78vh; /* 16/9 = 1.778 */
 
-	@media screen and (max-width: 500px) {
-		width: 100vw;
-		height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
-		max-height: 100vh;
-		max-width: 177.78vh; /* 16/9 = 1.778 */
-	}
+    @media screen and (max-width: 500px) {
+        width: 100vw;
+        height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+        max-height: 100vh;
+        max-width: 177.78vh; /* 16/9 = 1.778 */
+    }
 }
