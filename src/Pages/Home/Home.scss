@@ -1,32 +1,41 @@
 .anime-chart {
-	position: relative;
-	margin-top: -110px;
-	margin-left: 1vw;
-	margin-right: 1vw;
+    position: relative;
+    margin-top: -110px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    @media screen and (max-width: 550px) {
+        margin-top: 0.5rem;
+    }
 }
 
 .anime-container {
-	padding-top: 1rem;
-	width: 100%;
+    padding-top: 1rem;
+    width: 100%;
 }
 
 .TV {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+        @media screen and (max-width: 550px) {
+            color: #2b2d42;
+        }
+    }
 }
 
 .type-heading {
-	text-align: center;
-	font-size: 1.5rem;
-	padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .skeleton {
-	min-width: 460px;
-	height: 256px;
-	@media screen and (max-width: 500px) {
-		min-width: 300px;
-	}
-	margin: 10px;
+    min-width: 460px;
+    height: 256px;
+    @media screen and (max-width: 500px) {
+        min-width: 300px;
+    }
+    margin: 10px;
 }

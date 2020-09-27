@@ -1,34 +1,67 @@
 .nav-container {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	background-color: #2b2d42;
-	color: #bcbedc;
-	padding-top: 1rem;
-	padding-bottom: 0.5rem;
-	padding-bottom: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2b2d42;
+    color: #bcbedc;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-bottom: 8rem;
+
+    @media screen and (max-width: 550px) {
+        //display: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .seasons-container {
-	display: flex;
-	text-align: center;
+    display: flex;
+    text-align: center;
 
-	a {
-		padding: 1rem;
-		font-size: 1rem;
-		font-weight: bold;
-		div {
-			font-size: 0.8rem;
-			font-weight: lighter;
-		}
-	}
+    a {
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        @media screen and (max-width: 550px) {
+            font-size: 0.7rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        div {
+            font-size: 0.8rem;
+            font-weight: lighter;
+            @media screen and (max-width: 550px) {
+                font-size: 0.7rem;
+            }
+        }
+    }
 }
 
 .logo-container {
-	font-size: 2rem;
-	cursor: pointer;
+    font-size: 2rem;
+    cursor: pointer;
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 }
 
 .login {
-	font-weight: 700;
+    font-weight: 700;
+    @media screen and (max-width: 550px) {
+        font-size: 0.7rem;
+        padding-left: 1rem;
+    }
 }
