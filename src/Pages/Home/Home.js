@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchAnime } from "../../actions";
 import AnimeCard from "../../components/card/Card";
 import Grid from "@material-ui/core/Grid";
+import Skeleton from "@material-ui/lab/Skeleton";
 
 import "./Home.scss";
 
@@ -11,11 +12,33 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
 		dispatch(fetchAnime(season, year));
 	}, [dispatch, year, season]);
 
+	const test = [1, 2, 3, 4, 5, 6];
+
+	const renderSkeleton = () => {
+		return Array.from(new Array(15)).map((item) => {
+			return (
+				<Skeleton className="skeleton" variant="rect">
+					<AnimeCard />
+				</Skeleton>
+			);
+		});
+	};
+
 	const renderLoading = () => {
 		if (error) {
-			console.log("error");
+			return renderError();
 		}
-		return <div>Loading....</div>;
+		return (
+			<Grid
+				container
+				justify="center"
+				direction="row"
+				alignItems="center"
+				spacing={2}
+			>
+				{renderSkeleton()}
+			</Grid>
+		);
 	};
 
 	const renderError = () => {
@@ -29,39 +52,51 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
 				<div className="anime-container">
 					<div className="TV">
 						<h3 className="type-heading white">TV</h3>
-						<Grid
-							container
-							justify="center"
-							direction="row"
-							alignItems="center"
-							spacing={2}
-						>
-							{renderTVanime()}
-						</Grid>
+						{loading ? (
+							renderLoading()
+						) : (
+							<Grid
+								container
+								justify="center"
+								direction="row"
+								alignItems="center"
+								spacing={2}
+							>
+								{renderTVanime()}
+							</Grid>
+						)}
 					</div>
 					<div className="ONA">
 						<h3 className="type-heading black top-padding">ONA</h3>
-						<Grid
-							container
-							justify="center"
-							direction="row"
-							alignItems="center"
-							spacing={2}
-						>
-							{renderONAanime()}
-						</Grid>
+						{loading ? (
+							renderLoading()
+						) : (
+							<Grid
+								container
+								justify="center"
+								direction="row"
+								alignItems="center"
+								spacing={2}
+							>
+								{renderONAanime()}
+							</Grid>
+						)}
 					</div>
 					<div className="Movies">
 						<h3 className="type-heading black top-padding">Movies</h3>
-						<Grid
-							container
-							justify="center"
-							direction="row"
-							alignItems="center"
-							spacing={2}
-						>
-							{renderMoviesanime()}
-						</Grid>
+						{loading ? (
+							renderLoading()
+						) : (
+							<Grid
+								container
+								justify="center"
+								direction="row"
+								alignItems="center"
+								spacing={2}
+							>
+								{renderMoviesanime()}
+							</Grid>
+						)}
 					</div>
 				</div>
 			</section>
@@ -116,9 +151,7 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
 		));
 	};
 
-	return (
-		<div className="home-page">{loading ? renderLoading() : renderGrid()}</div>
-	);
+	return <div className="home-page">{renderGrid()}</div>;
 };
 
 const mapstateToProps = (state) => {
