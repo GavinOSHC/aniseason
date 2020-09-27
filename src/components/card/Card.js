@@ -33,7 +33,7 @@ export default function AnimeCard({ name, image, des, videoID }) {
 					color="textSecondary"
 					component="p"
 				>
-					{des}
+					{des ? des : "No Synopsis"}
 				</Typography>
 			</div>
 			<div className="watch-trailer" onClick={handleOpen}>

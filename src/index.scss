@@ -9,19 +9,24 @@ body {
 	background-color: rgb(237, 241, 245);
 }
 
-#root {
-	overflow-x: hidden;
-}
-
 a {
 	text-decoration: none;
 	color: inherit;
+	cursor: pointer;
 
-	&:hover {
-		color: white;
-	}
+	// &:hover {
+	// 	color: white;
+	// }
 }
 
 .white {
 	color: white;
+}
+
+.black {
+	color: #2b2d42;
+}
+
+.top-padding {
+	padding-top: 5rem;
 }

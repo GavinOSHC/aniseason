@@ -11,7 +11,7 @@ export default function App() {
 
 	return (
 		<>
-			<Nav season={handleSeason} />
+			<Nav season={handleSeason} active={season} />
 			<Home year={2020} season={season} />
 		</>
 	);
