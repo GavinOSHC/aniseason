@@ -58,7 +58,7 @@ const Nav = ({ season, active, year }) => {
                     </div>
                 </div>
                 <div className="login-container">
-                    <a className="login anchor" href="/login">
+                    <a className="login anchor" href="/">
                         Login
                     </a>
                 </div>

@@ -108,7 +108,7 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
             (anime) => anime.attributes.showType === "TV"
         );
         return tv.map(({ id, attributes }) => (
-            <Grid item xs={12} sm={6} md={3} key={id}>
+            <Grid item xs={12} sm={11} md={3} key={id}>
                 <AnimeCard
                     name={attributes.titles.en_jp}
                     image={attributes.posterImage.small}
@@ -124,7 +124,7 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
             (anime) => anime.attributes.showType === "ONA"
         );
         return tv.map(({ id, attributes }) => (
-            <Grid item xs={12} sm={6} md={3} key={id}>
+            <Grid item xs={12} sm={11} md={3} key={id}>
                 <AnimeCard
                     name={attributes.titles.en_jp}
                     image={attributes.posterImage.small}
@@ -140,7 +140,7 @@ const Home = ({ anime, loading, error, dispatch, year, season }) => {
             (anime) => anime.attributes.showType === "movie"
         );
         return tv.map(({ id, attributes }) => (
-            <Grid item xs={12} sm={6} md={3} key={id}>
+            <Grid item xs={12} sm={11} md={3} key={id}>
                 <AnimeCard
                     name={attributes.titles.en_jp}
                     image={attributes.posterImage.small}
